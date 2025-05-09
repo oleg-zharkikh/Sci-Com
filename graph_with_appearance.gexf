@@ -9,56 +9,284 @@
       <attribute id="1" title="color" type="string" />
     </attributes>
     <nodes>
-      <node id="HAORI NOMOKUTO" label="HAORI NOMOKUTO">
+      <node id="ABDUL MUIZ FAYYAZ" label="ABDUL MUIZ FAYYAZ">
         <attvalues>
           <attvalue for="0" value="20" />
           <attvalue for="1" value="#00FF00" />
         </attvalues>
       </node>
-      <node id="JOHN SMITH" label="JOHN SMITH">
+      <node id="MOHD FADZIL HASSAN" label="MOHD FADZIL HASSAN">
         <attvalues>
           <attvalue for="0" value="20" />
           <attvalue for="1" value="#00FF00" />
         </attvalues>
       </node>
-      <node id="EDWARD STIVENSON" label="EDWARD STIVENSON">
+      <node id="SAFWAN MAHMOOD AL-SELWI" label="SAFWAN MAHMOOD AL-SELWI">
         <attvalues>
           <attvalue for="0" value="20" />
           <attvalue for="1" value="#00FF00" />
         </attvalues>
       </node>
-      <node id="DAVID LI" label="DAVID LI">
+      <node id="MOHAMMED GAMAL RAGAB" label="MOHAMMED GAMAL RAGAB">
         <attvalues>
           <attvalue for="0" value="20" />
           <attvalue for="1" value="#00FF00" />
         </attvalues>
       </node>
-      <node id="TNU" label="TNU">
+      <node id="DONGWEI CHEN" label="DONGWEI CHEN">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="ALIYU USMAN" label="ALIYU USMAN">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="ALAWI ALQUSHAIBI" label="ALAWI ALQUSHAIBI">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="ZHEZHENG WU" label="ZHEZHENG WU">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="HAO WU" label="HAO WU">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="MUSLICH HARTADI SUTANTO" label="MUSLICH HARTADI SUTANTO">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="NOOR ZAINAB HABIB" label="NOOR ZAINAB HABIB">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="SURAJO ABUBAKAR WADA" label="SURAJO ABUBAKAR WADA">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="AHMAD HUSSAINI JAGABA" label="AHMAD HUSSAINI JAGABA">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="HANG YUAN" label="HANG YUAN">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="HITHAM SEDDIG ALHUSSIAN" label="HITHAM SEDDIG ALHUSSIAN">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="EBRAHIM HAMID SUMIEA" label="EBRAHIM HAMID SUMIEA">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="NURA SHEHU ALIYU YARO" label="NURA SHEHU ALIYU YARO">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="SAID JADID ABDULKADIR" label="SAID JADID ABDULKADIR">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="ABIOLA ADEBANJO" label="ABIOLA ADEBANJO">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="WEIMIN SONG" label="WEIMIN SONG">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="CENTRAL SOUTH UNIVERSITY" label="CENTRAL SOUTH UNIVERSITY">
         <attvalues>
           <attvalue for="0" value="40" />
           <attvalue for="1" value="#0000FF" />
         </attvalues>
       </node>
-      <node id="MIT" label="MIT">
+      <node id="UNIVERSITI TEKNOLOGI PETRONAS" label="UNIVERSITI TEKNOLOGI PETRONAS">
         <attvalues>
           <attvalue for="0" value="40" />
           <attvalue for="1" value="#0000FF" />
         </attvalues>
       </node>
-      <node id="FLAG UNIVERSITY" label="FLAG UNIVERSITY">
+      <node id="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD" label="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD">
         <attvalues>
           <attvalue for="0" value="40" />
           <attvalue for="1" value="#0000FF" />
+        </attvalues>
+      </node>
+      <node id="HERIOT-WATT UNIVERSITY" label="HERIOT-WATT UNIVERSITY">
+        <attvalues>
+          <attvalue for="0" value="40" />
+          <attvalue for="1" value="#0000FF" />
+        </attvalues>
+      </node>
+      <node id="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" label="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS">
+        <attvalues>
+          <attvalue for="0" value="40" />
+          <attvalue for="1" value="#0000FF" />
+        </attvalues>
+      </node>
+      <node id="AHMADU BELLO UNIVERSITY" label="AHMADU BELLO UNIVERSITY">
+        <attvalues>
+          <attvalue for="0" value="40" />
+          <attvalue for="1" value="#0000FF" />
+        </attvalues>
+      </node>
+      <node id="NIGERIA" label="NIGERIA">
+        <attvalues>
+          <attvalue for="0" value="60" />
+          <attvalue for="1" value="#FF0000" />
+        </attvalues>
+      </node>
+      <node id="UNITED ARAB EMIRATES" label="UNITED ARAB EMIRATES">
+        <attvalues>
+          <attvalue for="0" value="60" />
+          <attvalue for="1" value="#FF0000" />
+        </attvalues>
+      </node>
+      <node id="CHINA" label="CHINA">
+        <attvalues>
+          <attvalue for="0" value="60" />
+          <attvalue for="1" value="#FF0000" />
+        </attvalues>
+      </node>
+      <node id="SAUDI ARABIA" label="SAUDI ARABIA">
+        <attvalues>
+          <attvalue for="0" value="60" />
+          <attvalue for="1" value="#FF0000" />
+        </attvalues>
+      </node>
+      <node id="MALAYSIA" label="MALAYSIA">
+        <attvalues>
+          <attvalue for="0" value="60" />
+          <attvalue for="1" value="#FF0000" />
         </attvalues>
       </node>
     </nodes>
     <edges>
-      <edge source="HAORI NOMOKUTO" target="TNU" id="0" label="Cibersecurity investigation" weight="0.5" />
-      <edge source="HAORI NOMOKUTO" target="FLAG UNIVERSITY" id="1" label="Cibersecurity investigation" weight="0.5" />
-      <edge source="JOHN SMITH" target="MIT" id="2" label="Internal study of MIT" weight="1.0" />
-      <edge source="EDWARD STIVENSON" target="FLAG UNIVERSITY" id="3" label="IPROJ-1" weight="1.0" />
-      <edge source="DAVID LI" target="TNU" id="4" label="Cibersecurity investigation" weight="0.5" />
-      <edge source="DAVID LI" target="FLAG UNIVERSITY" id="5" label="IPROJ-1" weight="1.0" />
+      <edge source="ABDUL MUIZ FAYYAZ" target="UNIVERSITI TEKNOLOGI PETRONAS" id="0" label="P1" weight="1.0" />
+      <edge source="MOHD FADZIL HASSAN" target="UNIVERSITI TEKNOLOGI PETRONAS" id="1" label="P2" weight="1.0" />
+      <edge source="SAFWAN MAHMOOD AL-SELWI" target="UNIVERSITI TEKNOLOGI PETRONAS" id="2" label="P2" weight="1.0" />
+      <edge source="MOHAMMED GAMAL RAGAB" target="UNIVERSITI TEKNOLOGI PETRONAS" id="3" label="P2" weight="1.0" />
+      <edge source="DONGWEI CHEN" target="CENTRAL SOUTH UNIVERSITY" id="4" label="P4-1" weight="0.3" />
+      <edge source="DONGWEI CHEN" target="AHMADU BELLO UNIVERSITY" id="5" label="P4-1" weight="0.3" />
+      <edge source="DONGWEI CHEN" target="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD" id="6" label="P4-1" weight="0.3" />
+      <edge source="ALIYU USMAN" target="UNIVERSITI TEKNOLOGI PETRONAS" id="7" label="P3" weight="0.2" />
+      <edge source="ALIYU USMAN" target="AHMADU BELLO UNIVERSITY" id="8" label="P3" weight="0.2" />
+      <edge source="ALIYU USMAN" target="HERIOT-WATT UNIVERSITY" id="9" label="P3" weight="0.2" />
+      <edge source="ALIYU USMAN" target="CENTRAL SOUTH UNIVERSITY" id="10" label="P3" weight="0.2" />
+      <edge source="ALIYU USMAN" target="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" id="11" label="P3" weight="0.2" />
+      <edge source="ALAWI ALQUSHAIBI" target="UNIVERSITI TEKNOLOGI PETRONAS" id="12" label="P2" weight="1.0" />
+      <edge source="ZHEZHENG WU" target="CENTRAL SOUTH UNIVERSITY" id="13" label="P4-1" weight="0.3" />
+      <edge source="ZHEZHENG WU" target="AHMADU BELLO UNIVERSITY" id="14" label="P4-1" weight="0.3" />
+      <edge source="ZHEZHENG WU" target="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD" id="15" label="P4-1" weight="0.3" />
+      <edge source="HAO WU" target="CENTRAL SOUTH UNIVERSITY" id="16" label="P4-1" weight="0.3" />
+      <edge source="HAO WU" target="AHMADU BELLO UNIVERSITY" id="17" label="P4-1" weight="0.3" />
+      <edge source="HAO WU" target="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD" id="18" label="P4-1" weight="0.3" />
+      <edge source="MUSLICH HARTADI SUTANTO" target="UNIVERSITI TEKNOLOGI PETRONAS" id="19" label="P3" weight="0.2" />
+      <edge source="MUSLICH HARTADI SUTANTO" target="AHMADU BELLO UNIVERSITY" id="20" label="P3" weight="0.2" />
+      <edge source="MUSLICH HARTADI SUTANTO" target="HERIOT-WATT UNIVERSITY" id="21" label="P3" weight="0.2" />
+      <edge source="MUSLICH HARTADI SUTANTO" target="CENTRAL SOUTH UNIVERSITY" id="22" label="P3" weight="0.2" />
+      <edge source="MUSLICH HARTADI SUTANTO" target="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" id="23" label="P3" weight="0.2" />
+      <edge source="NOOR ZAINAB HABIB" target="UNIVERSITI TEKNOLOGI PETRONAS" id="24" label="P3" weight="0.2" />
+      <edge source="NOOR ZAINAB HABIB" target="AHMADU BELLO UNIVERSITY" id="25" label="P3" weight="0.2" />
+      <edge source="NOOR ZAINAB HABIB" target="HERIOT-WATT UNIVERSITY" id="26" label="P3" weight="0.2" />
+      <edge source="NOOR ZAINAB HABIB" target="CENTRAL SOUTH UNIVERSITY" id="27" label="P3" weight="0.2" />
+      <edge source="NOOR ZAINAB HABIB" target="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" id="28" label="P3" weight="0.2" />
+      <edge source="SURAJO ABUBAKAR WADA" target="UNIVERSITI TEKNOLOGI PETRONAS" id="29" label="P3" weight="0.2" />
+      <edge source="SURAJO ABUBAKAR WADA" target="AHMADU BELLO UNIVERSITY" id="30" label="P4-1" weight="0.3" />
+      <edge source="SURAJO ABUBAKAR WADA" target="HERIOT-WATT UNIVERSITY" id="31" label="P3" weight="0.2" />
+      <edge source="SURAJO ABUBAKAR WADA" target="CENTRAL SOUTH UNIVERSITY" id="32" label="P4-1" weight="0.3" />
+      <edge source="SURAJO ABUBAKAR WADA" target="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" id="33" label="P3" weight="0.2" />
+      <edge source="SURAJO ABUBAKAR WADA" target="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD" id="34" label="P4-1" weight="0.3" />
+      <edge source="AHMAD HUSSAINI JAGABA" target="UNIVERSITI TEKNOLOGI PETRONAS" id="35" label="P3" weight="0.2" />
+      <edge source="AHMAD HUSSAINI JAGABA" target="AHMADU BELLO UNIVERSITY" id="36" label="P3" weight="0.2" />
+      <edge source="AHMAD HUSSAINI JAGABA" target="HERIOT-WATT UNIVERSITY" id="37" label="P3" weight="0.2" />
+      <edge source="AHMAD HUSSAINI JAGABA" target="CENTRAL SOUTH UNIVERSITY" id="38" label="P3" weight="0.2" />
+      <edge source="AHMAD HUSSAINI JAGABA" target="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" id="39" label="P3" weight="0.2" />
+      <edge source="HANG YUAN" target="CENTRAL SOUTH UNIVERSITY" id="40" label="P4-1" weight="0.3" />
+      <edge source="HANG YUAN" target="AHMADU BELLO UNIVERSITY" id="41" label="P4-1" weight="0.3" />
+      <edge source="HANG YUAN" target="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD" id="42" label="P4-1" weight="0.3" />
+      <edge source="HITHAM SEDDIG ALHUSSIAN" target="UNIVERSITI TEKNOLOGI PETRONAS" id="43" label="P1" weight="1.0" />
+      <edge source="EBRAHIM HAMID SUMIEA" target="UNIVERSITI TEKNOLOGI PETRONAS" id="44" label="P3" weight="0.2" />
+      <edge source="EBRAHIM HAMID SUMIEA" target="AHMADU BELLO UNIVERSITY" id="45" label="P3" weight="0.2" />
+      <edge source="EBRAHIM HAMID SUMIEA" target="HERIOT-WATT UNIVERSITY" id="46" label="P3" weight="0.2" />
+      <edge source="EBRAHIM HAMID SUMIEA" target="CENTRAL SOUTH UNIVERSITY" id="47" label="P3" weight="0.2" />
+      <edge source="EBRAHIM HAMID SUMIEA" target="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" id="48" label="P3" weight="0.2" />
+      <edge source="NURA SHEHU ALIYU YARO" target="UNIVERSITI TEKNOLOGI PETRONAS" id="49" label="P3" weight="0.2" />
+      <edge source="NURA SHEHU ALIYU YARO" target="AHMADU BELLO UNIVERSITY" id="50" label="P3" weight="0.2" />
+      <edge source="NURA SHEHU ALIYU YARO" target="HERIOT-WATT UNIVERSITY" id="51" label="P3" weight="0.2" />
+      <edge source="NURA SHEHU ALIYU YARO" target="CENTRAL SOUTH UNIVERSITY" id="52" label="P3" weight="0.2" />
+      <edge source="NURA SHEHU ALIYU YARO" target="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" id="53" label="P3" weight="0.2" />
+      <edge source="SAID JADID ABDULKADIR" target="UNIVERSITI TEKNOLOGI PETRONAS" id="54" label="P2" weight="1.0" />
+      <edge source="ABIOLA ADEBANJO" target="UNIVERSITI TEKNOLOGI PETRONAS" id="55" label="P3" weight="0.2" />
+      <edge source="ABIOLA ADEBANJO" target="AHMADU BELLO UNIVERSITY" id="56" label="P3" weight="0.2" />
+      <edge source="ABIOLA ADEBANJO" target="HERIOT-WATT UNIVERSITY" id="57" label="P3" weight="0.2" />
+      <edge source="ABIOLA ADEBANJO" target="CENTRAL SOUTH UNIVERSITY" id="58" label="P3" weight="0.2" />
+      <edge source="ABIOLA ADEBANJO" target="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" id="59" label="P3" weight="0.2" />
+      <edge source="WEIMIN SONG" target="CENTRAL SOUTH UNIVERSITY" id="60" label="P4-1" weight="0.3" />
+      <edge source="WEIMIN SONG" target="AHMADU BELLO UNIVERSITY" id="61" label="P4-1" weight="0.3" />
+      <edge source="WEIMIN SONG" target="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD" id="62" label="P4-1" weight="0.3" />
+      <edge source="CENTRAL SOUTH UNIVERSITY" target="MALAYSIA" id="63" label="P3" weight="0.2" />
+      <edge source="CENTRAL SOUTH UNIVERSITY" target="NIGERIA" id="64" label="P4-1" weight="0.5" />
+      <edge source="CENTRAL SOUTH UNIVERSITY" target="UNITED ARAB EMIRATES" id="65" label="P3" weight="0.2" />
+      <edge source="CENTRAL SOUTH UNIVERSITY" target="CHINA" id="66" label="P4-1" weight="0.5" />
+      <edge source="CENTRAL SOUTH UNIVERSITY" target="SAUDI ARABIA" id="67" label="P3" weight="0.2" />
+      <edge source="UNIVERSITI TEKNOLOGI PETRONAS" target="MALAYSIA" id="68" label="P3" weight="0.2" />
+      <edge source="UNIVERSITI TEKNOLOGI PETRONAS" target="NIGERIA" id="69" label="P3" weight="0.2" />
+      <edge source="UNIVERSITI TEKNOLOGI PETRONAS" target="UNITED ARAB EMIRATES" id="70" label="P3" weight="0.2" />
+      <edge source="UNIVERSITI TEKNOLOGI PETRONAS" target="CHINA" id="71" label="P3" weight="0.2" />
+      <edge source="UNIVERSITI TEKNOLOGI PETRONAS" target="SAUDI ARABIA" id="72" label="P3" weight="0.2" />
+      <edge source="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD" target="CHINA" id="73" label="P4-1" weight="0.5" />
+      <edge source="HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD" target="NIGERIA" id="74" label="P4-1" weight="0.5" />
+      <edge source="HERIOT-WATT UNIVERSITY" target="MALAYSIA" id="75" label="P3" weight="0.2" />
+      <edge source="HERIOT-WATT UNIVERSITY" target="NIGERIA" id="76" label="P3" weight="0.2" />
+      <edge source="HERIOT-WATT UNIVERSITY" target="UNITED ARAB EMIRATES" id="77" label="P3" weight="0.2" />
+      <edge source="HERIOT-WATT UNIVERSITY" target="CHINA" id="78" label="P3" weight="0.2" />
+      <edge source="HERIOT-WATT UNIVERSITY" target="SAUDI ARABIA" id="79" label="P3" weight="0.2" />
+      <edge source="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" target="MALAYSIA" id="80" label="P3" weight="0.2" />
+      <edge source="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" target="NIGERIA" id="81" label="P3" weight="0.2" />
+      <edge source="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" target="UNITED ARAB EMIRATES" id="82" label="P3" weight="0.2" />
+      <edge source="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" target="CHINA" id="83" label="P3" weight="0.2" />
+      <edge source="KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS" target="SAUDI ARABIA" id="84" label="P3" weight="0.2" />
+      <edge source="AHMADU BELLO UNIVERSITY" target="MALAYSIA" id="85" label="P3" weight="0.2" />
+      <edge source="AHMADU BELLO UNIVERSITY" target="NIGERIA" id="86" label="P4-1" weight="0.5" />
+      <edge source="AHMADU BELLO UNIVERSITY" target="UNITED ARAB EMIRATES" id="87" label="P3" weight="0.2" />
+      <edge source="AHMADU BELLO UNIVERSITY" target="CHINA" id="88" label="P4-1" weight="0.5" />
+      <edge source="AHMADU BELLO UNIVERSITY" target="SAUDI ARABIA" id="89" label="P3" weight="0.2" />
     </edges>
   </graph>
 </gexf>

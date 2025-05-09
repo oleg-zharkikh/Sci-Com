@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import networkx as nx
 import subprocess
 import sys
+import platform
 
 
 VISUAL_SEPARATOR = ' - '
@@ -23,33 +24,63 @@ NODE_COLOR = {
 
 ENTITY_BY_NODE_SIZE = {NODE_SIZE[x]: x for x in NODE_SIZE.keys()}
 
+person_to_org_map = {
+    'EBRAHIM HAMID SUMIEA': ['UNIVERSITI TEKNOLOGI PETRONAS'],
+    'WEIMIN SONG': ['CENTRAL SOUTH UNIVERSITY'],
+    'DONGWEI CHEN': ['CENTRAL SOUTH UNIVERSITY'],
+    'HAO WU': ['CENTRAL SOUTH UNIVERSITY'],
+    'SURAJO ABUBAKAR WADA ': ['CENTRAL SOUTH UNIVERSITY',
+                              'AHMADU BELLO UNIVERSITY'],
+    'HANG YUAN': ['HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD']
+}
 
 articles = {
     'Person': [
-        ['John Smith'],
-        ['David Li', 'Haori Nomokuto'],
-        ['Edward Stivenson', 'David Li']
-    ],
+        ['EBRAHIM HAMID SUMIEA', 'SAID JADID ABDULKADIR',
+         'HITHAM SEDDIG ALHUSSIAN', 'SAFWAN MAHMOOD AL-SELWI',
+         'ALAWI ALQUSHAIBI', 'MOHAMMED GAMAL RAGAB', 'ABDUL MUIZ FAYYAZ'
+         ],
+        ['SAFWAN MAHMOOD AL-SELWI', 'MOHD FADZIL HASSAN',
+         'SAID JADID ABDULKADIR', 'MOHAMMED GAMAL RAGAB',
+         'ALAWI ALQUSHAIBI', 'EBRAHIM HAMID SUMIEA'
+         ],
+        ['EBRAHIM HAMID SUMIEA', 'NURA SHEHU ALIYU YARO',
+         'MUSLICH HARTADI SUTANTO',
+         'NOOR ZAINAB HABIB', 'ALIYU USMAN', 'ABIOLA ADEBANJO',
+         'SURAJO ABUBAKAR WADA', 'AHMAD HUSSAINI JAGABA'
+         ],
+        ['WEIMIN SONG', 'DONGWEI CHEN', 'HAO WU', 'ZHEZHENG WU',
+         'SURAJO ABUBAKAR WADA', 'HANG YUAN']
+        ],
     'ORG': [
-        ['MIT'],
-        ['TNU', 'Flag University'],
-        ['Flag University']
-    ],
+        ['UNIVERSITI TEKNOLOGI PETRONAS'],
+        ['UNIVERSITI TEKNOLOGI PETRONAS'],
+        ['UNIVERSITI TEKNOLOGI PETRONAS', 'AHMADU BELLO UNIVERSITY',
+         'HERIOT-WATT UNIVERSITY', 'CENTRAL SOUTH UNIVERSITY',
+         'KING FAHD UNIVERSITY OF PETROLEUM AND MINERALS'
+         ],
+        ['CENTRAL SOUTH UNIVERSITY', 'AHMADU BELLO UNIVERSITY',
+         'HUNAN TENGDA GEOTECHNICAL ENGINEERING TECHNOLOGY CO., LTD'
+         ]
+        ],
     'Country': [
-        ['USA'],
-        ['USA', 'Japan'],
-        ['USA']
-    ],
+        ['MALAYSIA'],
+        ['MALAYSIA'],
+        ['MALAYSIA', 'NIGERIA', 'UNITED ARAB EMIRATES',
+         'CHINA', 'SAUDI ARABIA'],
+        ['CHINA', 'NIGERIA']
+        ],
     'Project': [
-        ['Internal study of MIT'],
-        ['Cibersecurity', 'investigation'],
-        ['IPROJ-1']
+        ['P1'],
+        ['P2'],
+        ['P3'],
+        ['P4-1']
     ]
 }
 
 
 def get_unique_values(sequence):
-    """Возвращает список уникальных значений из вложенных списков."""
+    '''Возвращает список уникальных значений из вложенных списков.'''
     unique_values = set()
     for item in sequence:
         for subitem in item:
@@ -58,29 +89,16 @@ def get_unique_values(sequence):
 
 
 def gephi_open_with_appearance():
-    """Открывает граф в Gephi."""
-    # gephi_path = "C:/Program Files/Gephi-0.10.1/bin/gephi.exe"  # Windows
-    # gephi_path = "/Applications/Gephi.app/Contents/MacOS/gephi"  # Mac
-    gephi_path = "/home/oleg/Soft/gephi-0.10.1/bin/gephi"  # Linux
-
-    # Команда для запуска Gephi в headless-режиме
-    # command = [
-    #     '/home/oleg/Soft/gephi-0.10.1/bin/gephi',
-    #     '--run',
-    #     './apply_appearance.groovy'
-    # ]
-    # command = [
-    #     '/home/oleg/Soft/gephi-0.10.1/bin/gephi',
-    #     '--console',
-    #     '--run',
-    #     '/home/oleg/dev/pyqt_test/apply_appearance.groovy'
-    # ]
+    '''Открывает граф в Gephi.'''
+    os_name = platform.system()
+    if os_name.upper() == 'LINUX':
+        gephi_path = '/home/oleg/Soft/gephi-0.10.1/bin/gephi'
+    elif os_name.upper() == 'WINDOWS':
+        gephi_path = 'C:/Program Files/Gephi-0.10.1/bin/gephi.exe'
     command_open = [
         gephi_path,
-        "./graph_with_appearance.gexf"
+        './graph_with_appearance.gexf'
     ]
-    # Запуск
-    # subprocess.run(command, check=True)
     subprocess.Popen(command_open,
                      stdin=subprocess.DEVNULL,
                      stdout=subprocess.DEVNULL,
@@ -91,36 +109,56 @@ def gephi_open_with_appearance():
 
 
 def get_bigger_entity(entity_1, entity_2):
-    """Возвращает сущность старшего порядка."""
+    '''Возвращает сущность старшего порядка.'''
     return ENTITY_BY_NODE_SIZE[
         max(NODE_SIZE[entity_1], NODE_SIZE[entity_2])
     ]
 
 
 def get_all_pair(l1, l2):
-    """Возвращает все возможные пары из списков l1 и l2."""
+    '''Возвращает все возможные пары из списков l1 и l2.'''
     result = []
     for i in l1:
         for j in l2:
             if i != j:
-                result.append((i.upper(), j.upper()))
+                if ((i.upper(), j.upper()) not in result and
+                (j.upper(), i.upper()) not in result):
+                    result.append((i.upper(), j.upper()))
     return tuple(result)
 
 
+def reduce_edges(edges, smaller_entity, bigger_entity):
+    result = []
+    if smaller_entity == 'Person' and bigger_entity == 'ORG':
+        for x, y in edges:
+            if x in person_to_org_map:
+                orgs = person_to_org_map[x]
+                if y in orgs:
+                    result.append((x, y))
+            elif y in person_to_org_map:
+                orgs = person_to_org_map[y]
+                if x in orgs:
+                    result.append((x, y))
+            else:
+                result.append((x, y))
+    return result
+
+
 class GraphConstructor:
-    """Конструктор графа."""
+    '''Конструктор графа.'''
 
     def __init__(self):
         self.selected_params = {
-                'Person': 1,
-                'ORG': 1,
+                'Person': 0,
+                'ORG': 0,
                 'Country': 0
             }
         self.possible_edges = []
         self.selected_edges = []
+        self.reduce_edges = False
 
     def update_posible_edges(self):
-        """Обновление списка возможных ребер графа."""
+        '''Обновление списка возможных ребер графа.'''
         new_edges = []
         for node_0 in self.selected_params.keys():
             for node_1 in self.selected_params.keys():
@@ -139,8 +177,14 @@ class GraphConstructor:
                     x.split(VISUAL_SEPARATOR)
                     )) in self.possible_edges)]
 
+    def delete_item(self, item):
+        for idx, current_item in enumerate(self.selected_edges):
+            if item == current_item:
+                del self.selected_edges[idx]
+                break
+
     def create_graph(self):
-        """Создание графа на основе выбранных параметров."""
+        '''Создание графа на основе выбранных параметров.'''
         self.G = nx.Graph()
         # Добавление узлов.
         nodes = []
@@ -160,15 +204,27 @@ class GraphConstructor:
             y_list = articles[y]
             for idx, item in enumerate(x_list):
                 all_edges = get_all_pair(item, y_list[idx])
+                bigger_entity = get_bigger_entity(x, y)
+                smaller_entity = x if x != bigger_entity else y
+                if bigger_entity != smaller_entity and self.reduce_edges:
+                    print('reducing edges')
+                    all_edges = reduce_edges(
+                        all_edges,
+                        smaller_entity,
+                        bigger_entity
+                    )
                 edges_label = ' '.join(articles[EDGE_TITLE_COLUMN][idx])
-                EDGE_WEIGHT_COLUMN = get_bigger_entity(x, y)
-                edges_weight = round(1 / len(articles[EDGE_WEIGHT_COLUMN][idx]),1)
+                edge_weight_column = bigger_entity
+                edges_weight = round(
+                    1 / len(articles[edge_weight_column][idx]),
+                    1
+                )
                 self.G.add_edges_from(
                     all_edges,
                     label=edges_label,
                     weight=edges_weight
                 )
-        nx.write_gexf(self.G, "graph_with_appearance.gexf", version="1.2draft")
+        nx.write_gexf(self.G, 'graph_with_appearance.gexf', version='1.2draft')
 
 
 class Ui_MainWindow(object):
@@ -176,7 +232,7 @@ class Ui_MainWindow(object):
         self.gc = GraphConstructor()
 
     def change_selected_params(self, checkBox, param):
-        """Изменение перечня вершин графа."""
+        '''Изменение перечня вершин графа.'''
         if checkBox.checkState() > 0:
             self.gc.selected_params[param] = 1
         else:
@@ -193,23 +249,36 @@ class Ui_MainWindow(object):
     def checkBox3_press(self):
         self.change_selected_params(self.checkBox_3, 'Country')
 
-    def get_selected_item(self):
-        selected_indexes = self.listView.selectedIndexes()
+    def get_selected_item(self, listView, model):
+        selected_indexes = listView.selectedIndexes()
         if not selected_indexes:
             return None
         selected_index = selected_indexes[0]
-        selected_item = self.model.itemFromIndex(selected_index)
+        selected_item = model.itemFromIndex(selected_index)
         if selected_item:
             return selected_item.text()
         return None
 
     def button_press(self):
-        current_selected_item = self.get_selected_item()
+        current_selected_item = self.get_selected_item(
+            self.listView,
+            self.model
+        )
         if (current_selected_item and
            current_selected_item not in self.gc.selected_edges):
             self.gc.selected_edges.append(current_selected_item)
             self.clear_list_view2()
             self.fill_list_view2()
+
+    def button_2_press(self):
+        current_selected_item = self.get_selected_item(
+            self.listView_2,
+            self.model2
+        )
+        if current_selected_item:
+            self.gc.delete_item(current_selected_item)
+        self.clear_list_view2()
+        self.fill_list_view2()
 
     def button_finish_press(self):
         self.gc.create_graph()
@@ -239,43 +308,43 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         # GUI, генерируемый в Qt5 Designer
-        MainWindow.setObjectName("MainWindow")
+        MainWindow.setObjectName('MainWindow')
         MainWindow.resize(465, 533)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
+        self.centralwidget.setObjectName('centralwidget')
         self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox.setGeometry(QtCore.QRect(20, 40, 85, 24))
-        self.checkBox.setObjectName("checkBox")
+        self.checkBox.setObjectName('checkBox')
         self.checkBox_2 = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox_2.setGeometry(QtCore.QRect(20, 60, 85, 24))
-        self.checkBox_2.setObjectName("checkBox_2")
+        self.checkBox_2.setObjectName('checkBox_2')
         self.checkBox_3 = QtWidgets.QCheckBox(self.centralwidget)
         self.checkBox_3.setGeometry(QtCore.QRect(20, 80, 85, 24))
-        self.checkBox_3.setObjectName("checkBox_3")
+        self.checkBox_3.setObjectName('checkBox_3')
         self.listView = QtWidgets.QListView(self.centralwidget)
         self.listView.setGeometry(QtCore.QRect(20, 150, 291, 131))
-        self.listView.setObjectName("listView")
+        self.listView.setObjectName('listView')
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(320, 150, 80, 26))
-        self.pushButton.setObjectName("pushButton")
+        self.pushButton.setObjectName('pushButton')
         self.listView_2 = QtWidgets.QListView(self.centralwidget)
         self.listView_2.setGeometry(QtCore.QRect(20, 300, 291, 121))
-        self.listView_2.setObjectName("listView_2")
+        self.listView_2.setObjectName('listView_2')
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(320, 300, 80, 26))
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_2.setObjectName('pushButton_2')
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_3.setGeometry(QtCore.QRect(20, 440, 401, 61))
-        self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_3.setObjectName('pushButton_3')
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(20, 10, 361, 18))
-        self.label.setObjectName("label")
+        self.label.setObjectName('label')
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(20, 120, 321, 18))
-        self.label_2.setObjectName("label_2")
+        self.label_2.setObjectName('label_2')
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
+        self.statusbar.setObjectName('statusbar')
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
@@ -302,24 +371,28 @@ class Ui_MainWindow(object):
 
         # Buttons:
         self.pushButton.released.connect(self.button_press)
+        self.pushButton_2.released.connect(self.button_2_press)
         self.pushButton_3.released.connect(self.button_finish_press)
-
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow",
-                                             "Настройка формирования графа"))
-        self.checkBox.setText(_translate("MainWindow", "Person"))
-        self.checkBox_2.setText(_translate("MainWindow", "ORG"))
-        self.checkBox_3.setText(_translate("MainWindow", "Country"))
-        self.pushButton.setText(_translate("MainWindow", "Добавить"))
-        self.pushButton_2.setText(_translate("MainWindow", "Удалить"))
-        self.pushButton_3.setText(_translate("MainWindow", "Построить граф"))
-        self.label.setText(_translate("MainWindow", "Сущности для формирования узлов графа:"))
-        self.label_2.setText(_translate("MainWindow", "Связи для формирования ребер графа:"))
+        MainWindow.setWindowTitle(_translate('MainWindow',
+                                             'Настройка формирования графа'))
+        self.checkBox.setText(_translate('MainWindow', 'Person'))
+        self.checkBox_2.setText(_translate('MainWindow', 'ORG'))
+        self.checkBox_3.setText(_translate('MainWindow', 'Country'))
+        self.pushButton.setText(_translate('MainWindow', 'Добавить'))
+        self.pushButton_2.setText(_translate('MainWindow', 'Удалить'))
+        self.pushButton_3.setText(_translate('MainWindow', 'Построить граф'))
+        self.label.setText(
+            _translate('MainWindow',
+                       'Сущности для формирования узлов графа:')
+        )
+        self.label_2.setText(_translate('MainWindow',
+                                        'Связи для формирования ребер графа:'))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2025-05-09">
+    <creator>NetworkX 3.4.2</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="size" type="long" />
+      <attribute id="1" title="color" type="string" />
+    </attributes>
+    <nodes>
+      <node id="HAORI NOMOKUTO" label="HAORI NOMOKUTO">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="JOHN SMITH" label="JOHN SMITH">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="EDWARD STIVENSON" label="EDWARD STIVENSON">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="DAVID LI" label="DAVID LI">
+        <attvalues>
+          <attvalue for="0" value="20" />
+          <attvalue for="1" value="#00FF00" />
+        </attvalues>
+      </node>
+      <node id="TNU" label="TNU">
+        <attvalues>
+          <attvalue for="0" value="40" />
+          <attvalue for="1" value="#0000FF" />
+        </attvalues>
+      </node>
+      <node id="MIT" label="MIT">
+        <attvalues>
+          <attvalue for="0" value="40" />
+          <attvalue for="1" value="#0000FF" />
+        </attvalues>
+      </node>
+      <node id="FLAG UNIVERSITY" label="FLAG UNIVERSITY">
+        <attvalues>
+          <attvalue for="0" value="40" />
+          <attvalue for="1" value="#0000FF" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="HAORI NOMOKUTO" target="TNU" id="0" label="Cibersecurity investigation" weight="0.5" />
+      <edge source="HAORI NOMOKUTO" target="FLAG UNIVERSITY" id="1" label="Cibersecurity investigation" weight="0.5" />
+      <edge source="JOHN SMITH" target="MIT" id="2" label="Internal study of MIT" weight="1.0" />
+      <edge source="EDWARD STIVENSON" target="FLAG UNIVERSITY" id="3" label="IPROJ-1" weight="1.0" />
+      <edge source="DAVID LI" target="TNU" id="4" label="Cibersecurity investigation" weight="0.5" />
+      <edge source="DAVID LI" target="FLAG UNIVERSITY" id="5" label="IPROJ-1" weight="1.0" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,3 +1,4 @@
+"""pyinstaller --noconsole --onefile script.py"""
 from PyQt5 import QtCore, QtGui, QtWidgets
 import networkx as nx
 import subprocess
